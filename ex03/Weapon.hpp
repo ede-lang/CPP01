@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.class.hpp                                   :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ede-lang <ede-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/03 15:27:13 by ede-lang          #+#    #+#             */
-/*   Updated: 2024/07/05 10:21:00 by ede-lang         ###   ########.fr       */
+/*   Created: 2024/07/05 11:30:53 by ede-lang          #+#    #+#             */
+/*   Updated: 2024/07/05 12:20:34 by ede-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
-#include <iostream>
 
-#ifndef ZOMBIE_CLASS_HPP
-# define ZOMBIE_CLASS_HPP
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
-class	Zombie 
+class Weapon
 {
-	private :
+	private:
+		
+		std::string type;
 
-		std::string name;
-	
-	public :
-	
-		Zombie();
-		Zombie( std::string name );
-		~Zombie();
-		void announce( void ) const;
+	public:
+
+		Weapon(std::string type);
+		~Weapon();
+		std::string const	&getType() const;
+		void	setType(std::string type);
+
 };
 
 #endif

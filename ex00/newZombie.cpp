@@ -6,11 +6,11 @@
 /*   By: ede-lang <ede-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 10:24:03 by ede-lang          #+#    #+#             */
-/*   Updated: 2024/07/05 10:29:50 by ede-lang         ###   ########.fr       */
+/*   Updated: 2024/07/05 10:53:26 by ede-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.class.hpp"
+#include "Zombie.hpp"
 
 Zombie* newZombie( std::string name ) {
 	return (new Zombie(name));

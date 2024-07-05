@@ -1,4 +1,6 @@
-./*/obj/
-./*/Zombie
+*/obj/
+*/Zombie
 ex02/Reference
 .vscode/settings.json
+ex03/Violence
+ex04/replace

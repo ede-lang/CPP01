@@ -6,7 +6,7 @@
 #    By: ede-lang <ede-lang@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 14:46:49 by ede-lang          #+#    #+#              #
-#    Updated: 2024/07/05 10:20:18 by ede-lang         ###   ########.fr        #
+#    Updated: 2024/07/05 10:54:31 by ede-lang         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ OBJDIR		:= ./obj
 
 NAME	:= Zombie
 CC		:= clang++
-SRCS	:= main.cpp newZombie.cpp randomChump.cpp Zombie.class.cpp
+SRCS	:= main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
 OBJS	:= $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 CFLAGS	:= -Wextra -Wall -Werror -g -std=c++98

@@ -6,16 +6,16 @@
 #    By: ede-lang <ede-lang@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 14:46:49 by ede-lang          #+#    #+#              #
-#    Updated: 2024/07/05 10:54:38 by ede-lang         ###   ########.fr        #
+#    Updated: 2024/07/05 13:18:27 by ede-lang         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCDIR		:= ./
 OBJDIR		:= ./obj
 
-NAME	:= Zombie
+NAME	:= Violence
 CC		:= clang++
-SRCS	:= main.cpp zombieHorde.cpp Zombie.cpp
+SRCS	:= main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 OBJS	:= $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 CFLAGS	:= -Wextra -Wall -Werror -g -std=c++98
