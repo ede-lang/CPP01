@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ede-lang <ede-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/08 12:02:48 by ede-lang          #+#    #+#             */
-/*   Updated: 2024/07/08 14:26:44 by ede-lang         ###   ########.fr       */
+/*   Created: 2024/07/08 11:27:21 by ede-lang          #+#    #+#             */
+/*   Updated: 2024/07/08 14:07:47 by ede-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-int main()
+# include <string>
+# include <iostream>
+
+class Harl
 {
-	Harl harl;
-	
-	harl.complain("DEBUG");
+	private:
+		void debug( void );
+		void info( void );
+		void warning( void );
+		void error( void );
+		int getIntLevel( std::string level ) const;
+	public:
+		Harl();
+		~Harl();
+		void complain( std::string level );
+};
 
-	harl.complain("INFO");
-
-	harl.complain("WARNING");
-
-	harl.complain("ERROR");
-
-	harl.complain("NOTHING");
-
-	return 0;
-}
-
+#endif

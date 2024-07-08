@@ -6,7 +6,7 @@
 /*   By: ede-lang <ede-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 11:27:24 by ede-lang          #+#    #+#             */
-/*   Updated: 2024/07/08 14:26:28 by ede-lang         ###   ########.fr       */
+/*   Updated: 2024/07/08 14:24:17 by ede-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,38 @@ void Harl::error( void ) {
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-void Harl::complain( std::string level ) {
+int Harl::getIntLevel( std::string level ) const {
 	
 	std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	void (Harl::*ptr[])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
 	for (int i = 0; i < 4 ; i++)
 	{
 		if (level == levels[i])
-		{
-			(this->*ptr[i])();
-			break ;
-		}
+		return (i);
+	}
+	return (-1);
+}
+
+void Harl::complain( std::string level ) {
+	
+	switch (getIntLevel(level))
+	{
+		case 0:
+			Harl::debug();
+		
+		case 1:
+			Harl::info();
+		
+		case 2:
+			Harl::warning();
+		
+		case 3:
+			Harl::error();
+			break;
+
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+			break;
 	}
 }
 
