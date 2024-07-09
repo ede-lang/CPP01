@@ -6,7 +6,7 @@
 /*   By: ede-lang <ede-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 13:49:25 by ede-lang          #+#    #+#             */
-/*   Updated: 2024/07/05 15:06:00 by ede-lang         ###   ########.fr       */
+/*   Updated: 2024/07/09 16:52:54 by ede-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void replaceInFile(std::string filename, std::string s1, std::string s2)
 	std::string line;
 	size_t	pos;
 
+	if (s1 == "")
+		return ;
 	std::ifstream inputFile (filename);
 	if (inputFile.is_open()) {
 		std::ofstream outputFile (filename + ".replace");
