@@ -6,14 +6,14 @@
 /*   By: ede-lang <ede-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 11:30:53 by ede-lang          #+#    #+#             */
-/*   Updated: 2024/07/05 12:20:34 by ede-lang         ###   ########.fr       */
+/*   Updated: 2024/07/17 10:20:20 by ede-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-
 #ifndef WEAPON_HPP
 # define WEAPON_HPP
+
+#include <string>
 
 class Weapon
 {
